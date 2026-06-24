@@ -27,8 +27,9 @@ pipeline {
                 withSonarQubeEnv('sonar') {
                     sh ''' 
                         $SCANNER_HOME/bin/sonar-scanner \ 
-                            -Dsonar.projectName=NodeJS-Project \
-                            -Dsonar.projectKey=NodeJS-Project '''
+                            -Dsonar.projectName=three-tier-devsecops-Project \
+                            -Dsonar.projectKey=three-tier-devsecops-Project 
+                       '''
                 }
             }
         }
