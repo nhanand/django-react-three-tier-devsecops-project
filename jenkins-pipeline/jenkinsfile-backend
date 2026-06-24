@@ -32,21 +32,6 @@ pipeline {
                 }
             }
         }
-       # stage('Sonarqube Analysis') {
-       #     steps {
-       #        dir('app-code/backend') {
-       #           withSonarQubeEnv('sonar-server') {
-       #              sh ''' 
-       #                 $SCANNER_HOME/bin/sonar-scanner \
-       #                 -Dsonar.projectKey=backend \
-       #                 -Dsonar.sources=. \
-       #                 -Dsonar.host.url=http://44.244.210.204:9000 \
-       #                 -Dsonar.login=sqp_5940b2eeea33d0e4f873243a7a1f988ab74dd112
-       #                '''
-                    }
-                }
-            }
-        }
         stage('Quality Gate Check') {
             steps {
                 timeout(time: 1, unit: 'HOURS') {
